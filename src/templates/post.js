@@ -5,9 +5,11 @@ import React, { Component } from "react"
 class PostTemplate extends Component {
     render() {
         const post = this.props.data.wordpressPost
+        const site = this.props.data.site.siteMetadata
 
         return (
             <div>
+                <p>{site.title}</p>
                 <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
