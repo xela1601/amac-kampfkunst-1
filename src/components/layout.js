@@ -11,39 +11,46 @@ import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
 
 import Header from "./header"
-import "../style/base.scss"
+import "../style/all.scss"
+
+import NavBar from "./Nav/NavBar"
+import NavItem from "./Nav/NavItem"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+    const data = useStaticQuery(graphql`
+        query SiteTitleQuery {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
         }
-      }
-    }
-  `)
+    `)
 
-  return (
-    <>
-      <Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-      </Helmet>
+    return (
+        <>
+            <Helmet>
+                <Header siteTitle={data.site.siteMetadata.title} />
+            </Helmet>
 
-      <div>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
+            <NavBar>
+                <NavItem to="/">Home</NavItem>
+                <NavItem to="/wp-react/beispiel-seite/">Links</NavItem>
+                <NavItem to="/page-2/">Nonsense</NavItem>
+            </NavBar>
+
+            <div>
+                <main>{children}</main>
+                <footer>
+                    © {new Date().getFullYear()}, AMAC Kampfkunst
+                </footer>
+            </div>
+        </>
+    )
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 }
 
 export default Layout

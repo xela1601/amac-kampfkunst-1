@@ -1,0 +1,9 @@
+// NavItem
+.NavItem {
+    list-style: none;
+    color: $navitem-text-default;
+
+    .active {
+        color: $navitem-text-active;
+    }
+}
