@@ -18,15 +18,45 @@ And the Gatsby Site connected with the WordPress Site mirror the content with aw
 
 > Want to build a template for other wp-react projects from this code
 
-### Install
+## Install
 
 1. Install node modules: `npm i`
 2. Run gatsby: `gatsby develop`
 3. Run a WordPress Site...
 4. Add your wordpress url in the gatsby-config.js file
 
+## Configuration
 
-### Links
+### Styling: SASS
+**Files:** <br />
+`/src/style/all.scss` <br />
+Here are all sass-files importet: utils like `variables.scss`, `colors.scss`, `breakpoints.scss` and components like `button.scss` ... <br />
+For every new component you have to create a scss file in this folder: `/src/style/components/` <br />
+**colors.scss:** <br />
+Every color declared on the top and used by components seperated with logical variable-names like _'$button-text-default'_ or _'$button-text-hover'_ <br />
+**variables.scss:** <br />
+Here you add values like the height of the NavigationBar or Primary Font-Family name... <br />
+**breakpoints.scss:** <br />
+this function makes it easy to set up a breakpoint:
+```SASS
+.Button {
+  font-size: 18px;
+
+  @include bp(medium2) {
+    font-size: 22px;
+  }
+```
+
+### Fonts
+Add new google-fonts: Add in gatsby-config.js file and to the variables.scss to use it on components
+
+### Pages
+Now WordPress page-content can be used from `/templates/page.js` with GraphQL
+
+### Posts
+..And post-content from `/templates/post.js
+
+## Links
 
 How to use Gatsby <-> WordPress
 - https://www.youtube.com/watch?v=etii9yp1J6s
