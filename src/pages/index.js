@@ -15,8 +15,7 @@ const IndexPage = () => (
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/wp-page/">Go to page WP</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Link to="/wp-react/beispiel-seite/">Go to page WP</Link> <br />
   </Layout>
 )
 

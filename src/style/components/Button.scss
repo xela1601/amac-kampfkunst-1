@@ -1,0 +1,45 @@
+.Button {
+  display: inline-block;
+  color: $button-text-default;
+  background-color: $button-bg-default;
+  border: 2px solid $button-bd-default;
+  margin: 0 4px;
+  font-size: 18px;
+  border-radius: 24px;
+  font-weight: bold;
+
+  @include bp(medium3) {
+    border-width: 3px;
+    font-size: 22px;
+    margin: 0 8px;
+    border-radius: 28px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $button-bg-hover;
+    color: $button-text-hover;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    padding: 5px 10px;
+
+    @include bp(medium3) {
+        padding: 10px 15px;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+  }
+}

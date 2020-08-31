@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Link } from "gatsby"
+import Button from "../components/Button"
 
 class PageTemplate extends Component {
   render() {
@@ -16,9 +18,11 @@ class PageTemplate extends Component {
           <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
 
           <p dangerouslySetInnerHTML={{ __html: currentPage.date }} />
-          <p dangerouslySetInnerHTML={{ __html: currentPage.slug }} />
+          <b dangerouslySetInnerHTML={{ __html: currentPage.slug }} />
 
           <p>Seite veröffentlicht von: {currentPage.author.name}</p>
+          <Link to="/">Go back to the homepage</Link>
+          <Button to="/" label="Das ist ein Test" />
         </Layout>
       </div>
     )

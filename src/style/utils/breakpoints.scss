@@ -1,0 +1,119 @@
+// Breakpoints
+@mixin respond($value: null, $minmax: null, $property: null, $orientation: null) {
+    $query: ' only screen';
+    $query-minmax: null;
+    $query-property: null;
+    $query-dimension: null;
+    $query-orientation: null;
+
+    @if ($value) {
+        @if ($minmax) {
+            @if($minmax == 'min') or ($minmax == 'max') {
+                $query-minmax: $minmax;
+            } @else {
+                $query-minmax: 'min';
+            }
+        } @else {
+            $query-minmax: 'min';
+        }
+
+        @if($property) {
+            @if($property == 'width') or ($property == 'w') {
+                $query-property: 'width';
+            }
+
+            @if ($property == 'height') or ($property == 'h') {
+                $query-property: 'height';
+            }
+        } @else {
+            $query-property: 'width';
+        }
+
+        $query-dimension: 'and (' + $query-minmax + '-' + $query-property + ': ' + $value + ')';
+    } @else {
+        $query-dimension: '';
+    }
+
+    @if ($orientation) {
+        @if($orientation == 'portrait') or ($orientation == 'po') or ($orientation == 'p') {
+            $query-orientation: 'and (orientation: portrait)';
+        }
+
+        @if($orientation == 'landscape') or ($orientation == 'ls') or ($orientation == 'l') {
+            $query-orientation: 'and (orientation: landscape)';
+        }
+    } @else {
+        $query-orientation: '';
+    }
+
+    @media #{$query + ' ' + $query-dimension + $query-orientation} {
+        @content;
+    }
+}
+
+$break-small1: 480px;
+$break-small2: 680px;
+$break-medium1: 768px;
+$break-medium2: 769px;
+$break-medium3: 960px;
+$break-large1: 1024px;
+$break-large2: 1280px;
+$break-large3: 1440px;
+$break-large4: 1600px;
+$break-large5: 1920px;
+
+@mixin bp($media: null, $minmax: null, $property: null, $orientation: null) {
+    @if $media == small1 {
+        @include respond($break-small1, $minmax, $property, $orientation) {
+            @content;
+        }
+    } @else if $media == small2 {
+        @include respond($break-small2, $minmax, $property, $orientation) {
+            @content;
+        }
+    } @else if $media == medium1 {
+        @include respond($break-medium1, $minmax, $property, $orientation) {
+            @content;
+        }
+    } @else if $media == medium2 {
+        @include respond($break-medium2, $minmax, $property, $orientation) {
+            @content;
+        }
+    } @else if $media == medium3 {
+        @include respond($break-medium3, $minmax, $property, $orientation) {
+            @content;
+        }
+    } @else if $media == large1 {
+        @include respond($break-large1, $minmax, $property, $orientation) {
+            @content;
+        }
+    } @else if $media == large2 {
+        @include respond($break-large2, $minmax, $property, $orientation) {
+            @content;
+        }
+    } @else if $media == large3 {
+        @include respond($break-large3, $minmax, $property, $orientation) {
+            @content;
+        }
+    } @else if $media == large4 {
+        @include respond($break-large4, $minmax, $property, $orientation) {
+            @content;
+        }
+    } @else if $media == large5 {
+        @include respond($break-large5, $minmax, $property, $orientation) {
+            @content;
+        }
+    } @else if $media == po {
+        @include respond(null, $minmax, $property, $orientation: (po)) {
+            @content;
+        }
+    } @else if $media == ls {
+        @include respond(null, $minmax, $property, $orientation: (ls)) {
+            @content;
+        }
+    } @else {
+        @include respond($media, $minmax, $property, $orientation) {
+            @content;
+        }
+    }
+}
