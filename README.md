@@ -50,8 +50,10 @@ this function makes it easy to set up a breakpoint:
 Add new google-fonts: Add in gatsby-config.js file and to the variables.scss to use it on components
 
 ### Pages
+Now WordPress page-content can be used from `/templates/page.js` with GraphQL
 
 ### Posts
+..And post-content from `/templates/post.js
 
 ## Links
 
