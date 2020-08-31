@@ -29,8 +29,9 @@ And the Gatsby Site connected with the WordPress Site mirror the content with aw
 
 ### Styling: SASS
 **Files:** <br />
-`/src/style/all.scss` here are all sass-files importet utils: `variables.scss`, `colors.scss`, `breakpoints.scss` and components: `button.scss` ... <br />
-For every new component you have to create a scss file in this folder `/src/style/components/` <br />
+`/src/style/all.scss` <br />
+Here are all sass-files importet utils: `variables.scss`, `colors.scss`, `breakpoints.scss` and components: `button.scss` ... <br />
+For every new component you have to create a scss file in this folder: `/src/style/components/` <br />
 **colors.scss:** <br />
 Every color declared on the top and used by components seperated with logical variable-names like _'$button-text-default'_ or _'$button-text-hover'_ <br />
 **variables.scss:** <br />
