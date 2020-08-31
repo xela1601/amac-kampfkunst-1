@@ -6,12 +6,12 @@ export default class Button extends Component {
   render() {
     return (
       <div className="Button">
-        <Link to={this.props.to}>{this.props.label}</Link>
+        <Link to={this.props.to}>{this.props.children}</Link>
       </div>
     )
   }
 }
 
 Button.propTypes = {
-  label: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired
 }
