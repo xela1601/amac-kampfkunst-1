@@ -11,6 +11,7 @@
   Gatsby & WordPress
 </h1>
 
+# Project: AMAC Kampfkunst
 WordPress as Backend z.B _backend.amac-kampfkunst.de_ (Not for Searchengines open!) <br />
 And the Gatsby Site connected with the WordPress Site mirror the content with awesome react features (hosted on netlify)
 
