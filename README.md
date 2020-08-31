@@ -32,9 +32,9 @@ And the Gatsby Site connected with the WordPress Site mirror the content with aw
 `/src/style/all.scss` here are all sass-files importet utils: `variables.scss`, `colors.scss`, `breakpoints.scss` and components: `button.scss` ... <br />
 For every new component you have to create a scss file in this folder `/src/style/components/` <br />
 **colors.scss:** <br />
-Every color declared on the top and used by components seperated with logical variable-names like _'$button-text-default'_ or _'$button-text-hover'_
+Every color declared on the top and used by components seperated with logical variable-names like _'$button-text-default'_ or _'$button-text-hover'_ <br />
 **variables.scss:** <br />
-Here you add values like the height of the NavigationBar or Primary Font-Family name...
+Here you add values like the height of the NavigationBar or Primary Font-Family name... <br />
 **breakpoints.scss:** <br />
 this function makes it easy to set up a breakpoint:
 ```
