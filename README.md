@@ -38,7 +38,7 @@ Every color declared on the top and used by components seperated with logical va
 Here you add values like the height of the NavigationBar or Primary Font-Family name... <br />
 **breakpoints.scss:** <br />
 this function makes it easy to set up a breakpoint:
-```
+```SASS
 .Button {
   font-size: 18px;
 
