@@ -45,6 +45,7 @@ module.exports = {
       options: {
         fonts: [
           `Roboto Mono`,
+          `Alata`,
         ],
         display: 'swap'
       }

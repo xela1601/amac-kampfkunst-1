@@ -1,5 +1,6 @@
 import React, { Component } from "react"
-//import PropTypes from "prop-types"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 //import Img from "gatsby-image"
 
 class PostTemplate extends Component {
@@ -9,9 +10,12 @@ class PostTemplate extends Component {
 
         return (
             <div>
-                <p>{site.title}</p>
-                <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
-                <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                <Layout>
+                    <SEO title="Home" />
+                    <p>{site.title}</p>
+                    <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                </Layout>
             </div>
         )
     }

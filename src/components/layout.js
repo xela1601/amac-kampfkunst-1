@@ -35,8 +35,8 @@ const Layout = ({ children }) => {
 
             <NavBar>
                 <NavItem to="/">Home</NavItem>
-                <NavItem to="/wp-react/beispiel-seite/">Links</NavItem>
-                <NavItem to="/page-2/">Nonsense</NavItem>
+                <NavItem to="/wp-react/beispiel-seite/">WordPress-Page</NavItem>
+                <NavItem to="/wp-react/2020/08/25/hallo-welt/">WordPress-Post</NavItem>
             </NavBar>
 
             <div>

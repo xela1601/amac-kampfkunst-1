@@ -1,7 +1,8 @@
 // Colors
 $white: #fff;
 $black: #000;
-$grey1: rgba(128, 128, 128, 0.6);
+$grey1: #aaa;
+$grey2: #222;
 $transparent: transparent;
 
 
@@ -14,6 +15,11 @@ $button-bd-default: $black;
 $button-bg-hover: $black;
 $button-text-hover: $white;
 
+// NavBar
+$navbar-bg-default: $grey2;
+
 // NavItem
 $navitem-text-default: $grey1;
 $navitem-text-active: $black;
+$navitem-bg-default: $transparent;
+$navitem-bg-active: $grey1;

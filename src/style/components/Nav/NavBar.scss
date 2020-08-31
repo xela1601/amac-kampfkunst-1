@@ -1,6 +1,21 @@
 // NavBar
 .NavBar {
+    position: absolute;
+    margin-top: 20px;
+    padding: 8px 15px;
+    right: 50%;
+    transform: translateX(50%);
+    font-family: $menu-font-family;
+    font-size: 18px;
+    background-color: $navbar-bg-default;
+    border-radius: 24px;
+
+    @include bp(medium3) {
+        font-size: 22px;
+    }
+
     ul {
+        margin: 0;
         display: flex;
     }
 }
