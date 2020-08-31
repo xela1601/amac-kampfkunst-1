@@ -18,6 +18,13 @@ And the Gatsby Site connected with the WordPress Site mirror the content with aw
 
 > Want to build a template for other wp-react projects from this code
 
+### Install
+
+1. Install node modules: `npm i`
+2. Run gatsby: `gatsby develop`
+3. Run a WordPress Site...
+4. Add your wordpress url in the gatsby-config.js file
+
 
 ### Links
 
