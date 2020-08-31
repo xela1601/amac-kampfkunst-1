@@ -15,7 +15,7 @@ WordPress as Backend z.B _backend.amac-kampfkunst.de_ (Not for Searchengines ope
 And the Gatsby Site connected with the WordPress Site mirror the content with awesome react features (hosted on netlify)
 
 
-Want to build a template for other wp-react projects from this code
+> Want to build a template for other wp-react projects from this code
 
 
 ### Links
