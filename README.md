@@ -44,7 +44,6 @@ this function makes it easy to set up a breakpoint:
   @include bp(medium2) {
     font-size: 22px;
   }
-
 ```
 
 ### Fonts
