@@ -46,7 +46,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             .then(result => {
                 if (result.errors) {
                     console.log(result.errors);
-                    reject(result.errors);
+                    //reject(result.errors);
                 }
 
                 const pageTemplate = path.resolve("./src/templates/page.js");
@@ -62,14 +62,22 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 });
             })
 
+            // Posts
             .then(() => {
                 graphql(postsQuery)
                     .then(result => {
                         if (result.errors) {
                             console.log(result.errors);
-                            reject(result.errors);
+                            //reject(result.errors);
                         }
                         const postTemplate = path.resolve("./src/templates/post.js");
+                        const postsTemplate = path.resolve("./src/templates/posts.js");
+
+                        // Create Posts
+                        createPage({
+                            path: `/posts/`,
+                            component: slash(postsTemplate)
+                        });
 
                         _.each(result.data.allWordpressPost.edges, edge => {
                             createPage({

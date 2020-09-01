@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
             <NavBar>
                 <NavItem to="/">Home</NavItem>
                 <NavItem to="/beispiel-seite/">WordPress-Page</NavItem>
-                <NavItem to="/post/hallo-welt/">WordPress-Post</NavItem>
+                <NavItem to="/posts/">WordPress-Post</NavItem>
             </NavBar>
 
             <div className="content">
