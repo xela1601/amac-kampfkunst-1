@@ -17,11 +17,22 @@ And the Gatsby Site connected with the WordPress Site mirror the content with aw
 
 
 > Want to build a template for other wp-react projects from this code
+## Project architecture:
+1. Backend: Wordpress + Plugins(WP Gatsby + WP GraphQL) as headless cms
+2. Plugin pulls data from Wordpress Rest API and converts it to GraphQL-data
+3. Frontend: Gatsby - GraphQL data can be queried from there
+4. Figma for Prototyping https://www.figma.com/files/team/881944080226292116/AMAC-Kampfkunst
+
+## Environment Files
+
+### development
+GATSBY_GRAPHQL_IDE=playground //for advanced graphQL-IDE. to be accessed on route "/___graphql"
+
 
 ## Install
 
-1. Install node modules: `npm i`
-2. Run gatsby: `gatsby develop`
+1. Install node modules: `npm i` / `yarn install`
+2. Run gatsby: `gatsby develop` / `yarn start` (dev: env-cmd -f ./.env.development) 
 3. Run a WordPress Site...
 4. Add your wordpress url in the gatsby-config.js file
 
