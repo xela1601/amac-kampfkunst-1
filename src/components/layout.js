@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
                 <NavItem to="/wp-react/2020/08/25/hallo-welt/">WordPress-Post</NavItem>
             </NavBar>
 
-            <div>
+            <div className="content">
                 <main>{children}</main>
                 <footer>
                     © {new Date().getFullYear()}, AMAC Kampfkunst
